@@ -25,3 +25,20 @@ func writeJSON(w http.ResponseWriter, status int, data interface{}, headers http
 	w.Write(js)
 	return nil
 }
+
+func writeStringJSON(w http.ResponseWriter, status int, data string, headers http.Header) error {
+	js := []byte(data)
+	js = append(js, '\n')
+
+	for key, value := range headers {
+		w.Header()[key] = value
+	}
+
+	w.Header().Set("Content-Type", "application/json")
+	w.Header().Set("Date", time.Now().Format(http.TimeFormat))
+
+	w.WriteHeader(status)
+	w.Write(js)
+	return nil
+}
+
