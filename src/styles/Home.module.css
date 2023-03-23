@@ -9,20 +9,57 @@
   gap: 1.6rem;
 }
 
-.box {
-  box-shadow: 0 .5rem 1rem rgba(22, 78, 99, .2);
-  border-radius: .6rem;
-  margin: 2rem 10rem;
-  transition: box-shadow .4s ease;
+.heading {
+  font-size: 4.8rem;
+  color: #164e63;
+  margin: 0 0 .8rem 0;
 }
 
-.box:hover {
+.subheading {
+  font-size: 3.2rem;
+  margin: 0 0 2.6rem 0;
+  color: #164e63;
+}
+
+.box {
   box-shadow: 0 .3rem .8rem rgba(22, 78, 99, .3);
+  border-radius: .6rem;
+  margin: 1rem 8rem;
+  padding: 1rem;
+  transition: box-shadow .4s ease;
+  background-color: #ecfdf5;
+}
+
+.head {
+  box-shadow: 0 .3rem .8rem rgba(22, 78, 99, .3);
+  margin: 0 8rem;
+  padding: 2rem 1rem;
+  background-color: #f7fee7;
+}
+
+.checkboxLabel {
+  font-size: 2rem;
+  color: #164e63;
+  margin: 2rem 1.8rem;
+}
+
+.yearRange {
+  font-size: 2.4rem;
+  color: #164e63;
+  margin-top: 5rem;
+}
+
+.sliderBox {
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 2rem 0rem 0 4rem;
+  padding: 1rem 1rem;
+  gap: 1rem;
 }
 
 .boxHeader {
   padding-top: 1rem;
-  font-size: 3.2rem;
+  font-size: 3.4rem;
 }
 
 .boxBody {
