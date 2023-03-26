@@ -1,6 +1,6 @@
 import styles from "@/styles/Home.module.css";
 import { Space } from "antd";
-import type { Events } from "../../Types";
+import type { Events } from "@/Types";
 import EventDetails from "./EventDetails";
 
 interface Props {

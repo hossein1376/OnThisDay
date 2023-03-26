@@ -1,7 +1,7 @@
 import styles from "@/styles/Home.module.css";
 import { Divider, Image } from "antd";
 import { useState } from "react";
-import type { Events } from "../../Types";
+import type { Events } from "@/Types";
 
 export interface Props {
   event: Events;
@@ -14,19 +14,19 @@ export default function EventDetails({ event }: Props): JSX.Element {
 
   return (
     <>
-      <li className={styles.boxElement} key={event.year}>
+      <li className={styles.boxElement}>
         <div>
-          {event.year !== 0 && <h3 className={styles.year}>{event.year}</h3>}
-          {event.year !== 0 && (
+          {event?.year !== 0 && <h3 className={styles.year}>{event?.year}</h3>}
+          {event?.year !== 0 && (
             <h4 className={styles.yearsPast}>
-              {date.getFullYear() - event.year} years ago
+              {date.getFullYear() - event?.year} years ago
             </h4>
           )}
 
           <p className={styles.summery}>
-            {event.text}&nbsp;
+            {event?.text}&nbsp;
             <a
-              href={event.pages[0].content_urls.desktop.page}
+              href={event?.pages[0].content_urls.desktop.page}
               target={"_blank"}
               className={styles.readMore}
             >
@@ -42,18 +42,18 @@ export default function EventDetails({ event }: Props): JSX.Element {
           </p>
 
           {details && (
-            <p className={styles.details}>{event.pages[0].extract}</p>
+            <p className={styles.details}>{event?.pages[0].extract}</p>
           )}
         </div>
-        {event.pages[0]?.thumbnail?.source &&
-          event.pages[0].thumbnail.width && (
+        {event?.pages[0]?.thumbnail?.source &&
+          event?.pages[0].thumbnail.width && (
             <div className={styles.thumbnail}>
               <Image
-                width={event.pages[0].thumbnail.width}
-                src={event.pages[0].thumbnail.source}
-                alt={event.pages[0].description}
+                width={event?.pages[0].thumbnail.width}
+                src={event?.pages[0].thumbnail.source}
+                alt={event?.pages[0].description}
               />
-              <p className={styles.caption}>{event.pages[0].description}</p>
+              <p className={styles.caption}>{event?.pages[0].description}</p>
             </div>
           )}
       </li>
