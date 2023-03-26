@@ -1,7 +1,7 @@
 import styles from "@/styles/Home.module.css";
 import { Divider, Image } from "antd";
 import { useState } from "react";
-import type { Events } from "./Types";
+import type { Events } from "../../Types";
 
 export interface Props {
   event: Events;

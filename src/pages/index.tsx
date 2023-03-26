@@ -15,7 +15,7 @@ import {
 import Events from "./Events";
 
 import type { CheckboxValueType } from "antd/es/checkbox/Group";
-import type { Data } from "./Types";
+import type { Data } from "../../Types";
 
 const inter = Inter({ subsets: ["latin"] });
 
