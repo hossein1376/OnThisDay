@@ -1,8 +1,6 @@
 import Head from "next/head";
 import { Inter } from "next/font/google";
-
 import styles from "@/styles/Home.module.css";
-import EventType from "./EventType";
 import { useEffect, useState } from "react";
 import {
   Checkbox,
@@ -13,47 +11,13 @@ import {
   Skeleton,
   Slider,
 } from "antd";
+
+import Events from "./Events";
+
 import type { CheckboxValueType } from "antd/es/checkbox/Group";
+import type { Data } from "./Types";
 
 const inter = Inter({ subsets: ["latin"] });
-
-type Data = {
-  selected: Events[];
-  events: Events[];
-  holidays: Events[];
-  births: Events[];
-  deaths: Events[];
-};
-
-type Events = {
-  text: string;
-  pages: Page[];
-  year: number;
-};
-
-type Image = {
-  source: string;
-  width: number;
-  height: number;
-};
-
-type Page = {
-  title: string;
-  pageid: number;
-  thumbnail: Image;
-  originalimage: Image;
-  timestamp: string;
-  description: string;
-  content_urls: {
-    desktop: {
-      page: string;
-    };
-    mobile: {
-      page: string;
-    };
-  };
-  extract: string;
-};
 
 export default function Home() {
   const [data, setData] = useState<Data>();
@@ -68,6 +32,7 @@ export default function Home() {
   const [yearRange, setYearRange] = useState<[number, number]>([0, 2023]);
 
   const date = new Date().toJSON().slice(0, 10).replace(/-/g, "/");
+
   useEffect(() => {
     const url = "https://docker.iran.liara.run/events";
     fetch(url)
@@ -113,6 +78,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
       <main className={styles.main}>
         {loading && (
           <div className={styles.boxBody}>
@@ -190,43 +156,43 @@ export default function Home() {
               </Row>
             </div>
             {selected && (
-              <EventType
+              <Events
                 title={"Selected Events"}
                 data={data?.selected}
                 yearRange={yearRange}
-              ></EventType>
+              ></Events>
             )}
 
             {events && (
-              <EventType
+              <Events
                 title={"Events"}
                 data={data?.events}
                 yearRange={yearRange}
-              ></EventType>
+              ></Events>
             )}
 
             {holidays && (
-              <EventType
+              <Events
                 title={"Holidays"}
                 data={data?.holidays}
                 yearRange={yearRange}
-              ></EventType>
+              ></Events>
             )}
 
             {births && (
-              <EventType
+              <Events
                 title={"Births"}
                 data={data?.births}
                 yearRange={yearRange}
-              ></EventType>
+              ></Events>
             )}
 
             {deaths && (
-              <EventType
+              <Events
                 title={"Deaths"}
                 data={data?.deaths}
                 yearRange={yearRange}
-              ></EventType>
+              ></Events>
             )}
           </>
         )}

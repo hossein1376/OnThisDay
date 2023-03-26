@@ -46,13 +46,13 @@
 .yearRange {
   font-size: 2.4rem;
   color: #164e63;
-  margin-top: 5rem;
+  margin-top: 4rem;
 }
 
 .sliderBox {
   display: flex;
   flex-wrap: nowrap;
-  margin: 2rem 0rem 0 4rem;
+  margin: 2rem 0 0 4rem;
   padding: 1rem 1rem;
   gap: 1rem;
 }
@@ -71,5 +71,50 @@
 .boxElement {
   display: flex;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 2rem;
+}
+
+.year {
+  font-size: 2.8rem;
+}
+
+.yearsPast {
+  font-size: 2.4rem;
+}
+
+.summery {
+  font-size: 2.2rem;
+  color: #164e63;
+  margin: 2rem 0 4rem 0;
+}
+
+.readMore {
+  font-size: 2rem;
+  color: #0891b2;
+}
+
+.viewDetails {
+  font-size: 2rem;
+  color: #0e7490;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.details {
+  font-size: 2.1rem;
+  margin-top: 1rem;
+}
+
+.thumbnail {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.caption {
+  font-size: 1.6rem;
+  color: #164e63;
+  text-align: center;
+  margin: 1rem 0 0 0;
+  align-self: center;
 }
