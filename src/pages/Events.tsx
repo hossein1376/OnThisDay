@@ -13,10 +13,9 @@ export default function Events({ title, data, yearRange }: Props): JSX.Element {
   const events = data?.map((event) => {
     if (event.year >= yearRange[0] && event.year <= yearRange[1]) {
       return (
-        <>
+        <ul key={event.pages[0].pageid}>
           <EventDetails event={event} />
-          <Divider />
-        </>
+        </ul>
       );
     }
   });

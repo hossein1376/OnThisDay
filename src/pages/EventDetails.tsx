@@ -1,5 +1,5 @@
 import styles from "@/styles/Home.module.css";
-import { Image } from "antd";
+import { Divider, Image } from "antd";
 import { useState } from "react";
 import type { Events } from "./Types";
 
@@ -57,6 +57,7 @@ export default function EventDetails({ event }: Props): JSX.Element {
             </div>
           )}
       </li>
+      <Divider />
     </>
   );
 }
