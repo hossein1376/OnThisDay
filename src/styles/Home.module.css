@@ -11,14 +11,14 @@
 
 .heading {
   font-size: 4.8rem;
-  color: #164e63;
+  color: #334155;
   margin: 0 0 .8rem 0;
 }
 
 .subheading {
   font-size: 3.2rem;
   margin: 0 0 2.6rem 0;
-  color: #164e63;
+  color: #334155;
 }
 
 .box {
@@ -27,32 +27,32 @@
   margin: 1rem 8rem;
   padding: 1rem;
   transition: box-shadow .4s ease;
-  background-color: #ecfdf5;
+  background-color: #d1fae5;
 }
 
 .head {
   box-shadow: 0 .3rem .8rem rgba(22, 78, 99, .3);
   margin: 0 8rem;
   padding: 2rem 1rem;
-  background-color: #f7fee7;
+  background-color: #ecfccb;
 }
 
 .checkboxLabel {
   font-size: 2rem;
-  color: #164e63;
+  color: #334155;
   margin: 2rem 1.8rem;
 }
 
 .yearRange {
   font-size: 2.4rem;
-  color: #164e63;
+  color: #334155;
   margin-top: 4rem;
 }
 
 .sliderBox {
   display: flex;
   flex-wrap: nowrap;
-  margin: 2rem 0 0 4rem;
+  margin: 2rem 2rem 0 2rem;
   padding: 1rem 1rem;
   gap: 1rem;
 }
@@ -84,37 +84,46 @@
 
 .summery {
   font-size: 2.2rem;
-  color: #164e63;
+  color: #334155;
   margin: 2rem 0 4rem 0;
 }
 
 .readMore {
   font-size: 2rem;
-  color: #0891b2;
+  color: #0e7490;
 }
 
 .viewDetails {
+  display: inline-block;
   font-size: 2rem;
   color: #0e7490;
   cursor: pointer;
   margin-bottom: 1rem;
+  transition: all .2s ease;
+}
+
+.viewDetails:hover {
+  color: #06b6d4;
 }
 
 .details {
   font-size: 2.1rem;
   margin-top: 1rem;
+  padding: 1rem;
+  transition: opacity 5s ease-in;
+  background-color: #dcfce7;
 }
 
 .thumbnail {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  justify-content: center;
+  /*justify-content: center;*/
 }
 
 .caption {
   font-size: 1.6rem;
-  color: #164e63;
+  color: #334155;
   text-align: center;
   margin: 1rem 0 0 0;
   align-self: center;

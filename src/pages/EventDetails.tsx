@@ -1,9 +1,11 @@
+import { useState } from "react";
+
 import styles from "@/styles/Home.module.css";
 import { Divider, Image } from "antd";
-import { useState } from "react";
+
 import type { Events } from "@/Types";
 
-export interface Props {
+interface Props {
   event: Events;
 }
 

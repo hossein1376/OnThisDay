@@ -34,7 +34,10 @@ export default function Home() {
   const date = new Date().toJSON().slice(0, 10).replace(/-/g, "/");
 
   useEffect(() => {
-    const url = "https://docker.iran.liara.run/events";
+    const url = process.env.NEXT_PUBLIC_API_URL;
+    if (url === undefined) {
+      throw new Error("NEXT_PUBLIC_API_URL is undefined");
+    }
     fetch(url)
       .then((res) => res.json())
       .then((data: Data) => {
