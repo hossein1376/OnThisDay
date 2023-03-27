@@ -12,3 +12,10 @@ body {
   color: #334155;
   background-color: #cffafe;
 }
+
+@media (max-width: 900px) {
+  html,
+  body {
+    font-size: 50%;
+  }
+}

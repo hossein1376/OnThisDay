@@ -128,3 +128,62 @@
   margin: 1rem 0 0 0;
   align-self: center;
 }
+
+/*::::::::::::: Media Queries :::::::::::*/
+@media (max-width: 1280px) {
+  .main {
+    padding: 2rem 1rem 1rem 1rem;
+  }
+  .head {
+    margin: 0 4rem;
+  }
+  .box{
+    margin: 1rem 4rem;
+  }
+  .boxBody{
+    padding: 2rem 2rem 2rem 4rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .main {
+    padding: 2rem 1rem 1rem 1rem;
+  }
+  .head {
+    margin: 0 2rem;
+  }
+  .box{
+    margin: .5rem 1rem;
+    padding: .5rem .2rem;
+  }
+}
+
+@media (max-width: 720px) {
+  .thumbnail div {
+    max-width: 200px;
+  }
+  .main {
+    padding: 1rem .7rem .7rem .7rem;
+  }
+  .head {
+    margin: 0 1.2rem;
+  }
+  .box{
+    margin: .5rem 1.2rem;
+  }
+  .boxBody{
+    padding: 1rem 1.5rem 1rem 1.5rem;
+  }
+  .checkboxLabel{
+    margin: 1rem .9rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .thumbnail div {
+    max-width: 150px;
+  }
+  .checkboxLabel{
+    margin: 1rem .9rem;
+  }
+}
