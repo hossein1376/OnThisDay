@@ -156,9 +156,15 @@
     margin: .5rem 1rem;
     padding: .5rem .2rem;
   }
+  .thumbnail div {
+    max-width: 225px;
+  }
 }
 
 @media (max-width: 720px) {
+  .thumbnail {
+    align-items: center;
+  }
   .thumbnail div {
     max-width: 200px;
   }
@@ -174,6 +180,9 @@
   .boxBody{
     padding: 1rem 1.5rem 1rem 1.5rem;
   }
+  .boxElement {
+    flex-direction: column;
+  }
   .checkboxLabel{
     margin: 1rem .9rem;
   }
@@ -181,7 +190,7 @@
 
 @media (max-width: 500px) {
   .thumbnail div {
-    max-width: 150px;
+    max-width: 175px;
   }
   .checkboxLabel{
     margin: 1rem .9rem;

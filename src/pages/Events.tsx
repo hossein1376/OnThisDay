@@ -2,7 +2,7 @@ import styles from "@/styles/Home.module.css";
 import {Space} from "antd";
 import type {Events} from "@/Types";
 import EventDetails from "./EventDetails";
-import useWindowDimensions from "@/hooks/getWindowDimensions";
+import useWindowSize from "@/hooks/useWindowSize";
 
 interface Props {
   title: string;
@@ -11,7 +11,7 @@ interface Props {
 }
 
 export default function Events({title, data, yearRange}: Props): JSX.Element {
-  const {height, width} = useWindowDimensions();
+  const {height, width} = useWindowSize();
   const size = width > 720 ? "large" : "small";
 
   const events = data?.map((event) => {
