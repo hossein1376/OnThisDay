@@ -197,6 +197,24 @@ export default function Home() {
                 yearRange={yearRange}
               ></Events>
             )}
+
+            <footer className={styles.footer}>
+              <a
+                href={"https://github.com/hossein1376/OnThisDay"}
+                target={"_blank"}
+                className={styles.footerLink}
+              >
+                GitHub Page
+              </a>
+              &nbsp; - &nbsp; A project by{" "}
+              <a
+                href={"https://HmYazdani.ir"}
+                target={"_blank"}
+                className={styles.footerLink}
+              >
+                Hossein Yazdani
+              </a>
+            </footer>
           </>
         )}
       </main>

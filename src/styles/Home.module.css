@@ -129,18 +129,52 @@
   align-self: center;
 }
 
+.footer {
+  box-shadow: 0 .3rem .8rem rgba(22, 78, 99, .3);
+  margin: 0 8rem;
+  padding: 2rem 1rem;
+  background-color: #f3e8ff;
+  color: #334155;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.footerLink:link,
+.footerLink:visited {
+  text-decoration: none;
+  color: #475569;
+}
+
+.footerLink:hover {
+  text-decoration: none;
+  color: #64748b;
+}
+
+.footerLink:active {
+  text-decoration: none;
+  color: #475569;
+}
+
+
 /*::::::::::::: Media Queries :::::::::::*/
 @media (max-width: 1280px) {
   .main {
     padding: 2rem 1rem 1rem 1rem;
   }
+
   .head {
     margin: 0 4rem;
   }
-  .box{
+
+  .footer {
+    margin: 0 4rem;
+  }
+
+  .box {
     margin: 1rem 4rem;
   }
-  .boxBody{
+
+  .boxBody {
     padding: 2rem 2rem 2rem 4rem;
   }
 }
@@ -149,13 +183,20 @@
   .main {
     padding: 2rem 1rem 1rem 1rem;
   }
+
   .head {
     margin: 0 2rem;
   }
-  .box{
+
+  .footer {
+    margin: 0 2rem;
+  }
+
+  .box {
     margin: .5rem 1rem;
     padding: .5rem .2rem;
   }
+
   .thumbnail div {
     max-width: 225px;
   }
@@ -165,25 +206,36 @@
   .thumbnail {
     align-items: center;
   }
+
   .thumbnail div {
     max-width: 200px;
   }
+
   .main {
     padding: 1rem .7rem .7rem .7rem;
   }
+
   .head {
     margin: 0 1.2rem;
   }
-  .box{
+
+  .footer {
+    margin: 0 1.2rem;
+  }
+
+  .box {
     margin: .5rem 1.2rem;
   }
-  .boxBody{
+
+  .boxBody {
     padding: 1rem 1.5rem 1rem 1.5rem;
   }
+
   .boxElement {
     flex-direction: column;
   }
-  .checkboxLabel{
+
+  .checkboxLabel {
     margin: 1rem .9rem;
   }
 }
@@ -192,7 +244,8 @@
   .thumbnail div {
     max-width: 175px;
   }
-  .checkboxLabel{
+
+  .checkboxLabel {
     margin: 1rem .9rem;
   }
 }
