@@ -7,7 +7,7 @@ import (
 	"net/http"
 )
 
-func router() chi.Router {
+func (app *application) router() chi.Router {
 	r := chi.NewRouter()
 	r.Use(middleware.Logger, middleware.Recoverer)
 	r.Use(cors.Handler(cors.Options{
@@ -17,19 +17,16 @@ func router() chi.Router {
 		AllowedHeaders:   []string{"*"},
 		AllowCredentials: false,
 	}))
-	r.Use(middleware.Heartbeat("/ping"))
 
 	r.NotFound(func(w http.ResponseWriter, r *http.Request) {
-		notFoundResponse(w, r)
+		app.notFoundResponse(w, r)
 	})
 	r.MethodNotAllowed(func(w http.ResponseWriter, r *http.Request) {
-		methodNotAllowedResponse(w, r)
+		app.methodNotAllowedResponse(w, r)
 	})
 
-	r.Get("/", func(w http.ResponseWriter, r *http.Request) {
-		w.Write([]byte("looking for something?"))
-	})
-	r.Get("/events", GetEventsHandler)
+	r.Get("/events", app.GetEventsHandler)
+	r.Get("/events/{lang}", app.GetLanguageEventHandler)
 
 	return r
 }

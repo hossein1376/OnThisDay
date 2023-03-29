@@ -41,4 +41,3 @@ func writeStringJSON(w http.ResponseWriter, status int, data string, headers htt
 	w.Write(js)
 	return nil
 }
-

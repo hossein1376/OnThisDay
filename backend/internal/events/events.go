@@ -61,14 +61,6 @@ type Config struct {
 }
 
 func Events(cfg Config) (*OnThisDay, error) {
-	otd, err := getEvents(cfg)
-	if err != nil {
-		return nil, err
-	}
-	return otd, nil
-}
-
-func getEvents(cfg Config) (*OnThisDay, error) {
 	url := fmt.Sprintf("https://api.wikimedia.org/feed/v1/wikipedia/%s/onthisday/%s/%v/%v", cfg.Language, cfg.Type, cfg.Month, cfg.Day)
 
 	resp, err := http.Get(url)
