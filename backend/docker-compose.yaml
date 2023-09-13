@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  web:
+    build: .
+    restart: on-failure
+    environment:
+      - DB_ADDRESS=redis:6379
+    ports:
+      - "4000:4000"
+  redis:
+    image: "redis:7.2.1-alpine3.18"
+
+networks:
+  backend:
