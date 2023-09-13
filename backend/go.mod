@@ -3,10 +3,9 @@ module OnThisDay
 go 1.20
 
 require (
-	github.com/go-chi/chi/v5 v5.0.8
+	github.com/go-chi/chi/v5 v5.0.10
 	github.com/go-chi/cors v1.2.1
-	github.com/redis/go-redis/v9 v9.0.2
-	golang.org/x/exp v0.0.0-20230321023759-10a507213a29
+	github.com/redis/go-redis/v9 v9.1.0
 )
 
 require (
