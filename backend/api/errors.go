@@ -1,9 +1,8 @@
 package api
 
 import (
+	"log/slog"
 	"net/http"
-
-	"golang.org/x/exp/slog"
 )
 
 func (app *application) errorResponse(w http.ResponseWriter, r *http.Request, status int, message interface{}) {

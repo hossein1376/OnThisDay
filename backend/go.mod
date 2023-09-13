@@ -1,4 +1,4 @@
-module OnThisDay
+module github.com/hossein1376/OnThisDay
 
 go 1.20
 

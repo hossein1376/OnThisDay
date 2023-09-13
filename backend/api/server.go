@@ -3,11 +3,11 @@ package api
 import (
 	"context"
 	"fmt"
+	"log/slog"
 	"net/http"
 	"os"
 
 	"github.com/redis/go-redis/v9"
-	"golang.org/x/exp/slog"
 )
 
 var RDB *redis.Client
@@ -27,7 +27,7 @@ type application struct {
 }
 
 func RunServer() {
-	jsonHandler := slog.NewJSONHandler(os.Stdout)
+	jsonHandler := slog.NewJSONHandler(os.Stdout, nil)
 	logger := slog.New(jsonHandler)
 
 	cfg := &config{
@@ -46,6 +46,11 @@ func RunServer() {
 	app := &application{
 		logger: logger,
 		config: cfg,
+	}
+
+	addr := os.Getenv("DB_ADDRESS")
+	if addr != "" {
+		cfg.db.address = addr
 	}
 
 	RDB = redis.NewClient(&redis.Options{

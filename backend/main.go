@@ -1,7 +1,7 @@
 package main
 
 import (
-	"OnThisDay/api"
+	"github.com/hossein1376/OnThisDay/api"
 )
 
 func main() {

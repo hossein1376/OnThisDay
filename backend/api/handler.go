@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"time"
 
-	"OnThisDay/internal/events"
+	"github.com/hossein1376/OnThisDay/internal/events"
 
 	"github.com/go-chi/chi/v5"
 	"github.com/redis/go-redis/v9"
