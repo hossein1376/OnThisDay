@@ -208,7 +208,7 @@ export default function Home() {
               </a>
               &nbsp; - &nbsp; A project by{" "}
               <a
-                href={"https://HmYazdani.ir"}
+                href={"https://GodlyNice.ir"}
                 target={"_blank"}
                 className={styles.footerLink}
               >
