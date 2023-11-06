@@ -3,7 +3,7 @@ version: "3"
 services:
   web:
     build: .
-    restart: on-failure
+    restart: always
     environment:
       - DB_ADDRESS=redis:6379
     ports:
