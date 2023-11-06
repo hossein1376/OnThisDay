@@ -9,7 +9,7 @@ services:
     ports:
       - "4000:4000"
   redis:
-    image: "redis:7.2.1-alpine3.18"
+    image: "redis:7.2.3-alpine3.18"
 
 networks:
   backend:
