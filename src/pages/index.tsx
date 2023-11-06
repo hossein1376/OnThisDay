@@ -147,7 +147,7 @@ export default function Home() {
                     min={0}
                     max={2023}
                     defaultValue={[0, 2023]}
-                    onChange={sliderChangeHandler}
+                    onChange={() => sliderChangeHandler}
                   />
                 </Col>
                 <InputNumber
